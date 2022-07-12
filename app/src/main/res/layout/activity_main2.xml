@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    tools:context=".MainActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tesla"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cybertruck"
+                android:textColor="@color/text_white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/neumorphImageButton"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:padding="25dp"
+            android:src="@drawable/ic_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorDark="@color/shadow1"
+            app:neumorph_shadowColorLight="@color/shadow2"
+            app:neumorph_shadowElevation="4dp"
+            app:neumorph_shapeAppearance="@style/neuImage"
+            app:neumorph_shapeType="pressed" />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:padding="25dp"
+            android:src="@drawable/ic_range"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorDark="@color/shadow1"
+            app:neumorph_shadowColorLight="@color/shadow2"
+            app:neumorph_shadowElevation="4dp"
+            app:neumorph_shapeAppearance="@style/neuImage"
+            app:neumorph_shapeType="pressed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_tesla2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="ContentDescription" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--             item 1-->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/shadow1"
+                app:neumorph_shadowColorLight="@color/shadow2"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_shapeAppearance="@style/neuCard"
+                app:neumorph_shapeType="basin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_background">
+
+                    <TextView
+                        android:id="@+id/textView2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Engine"
+                        android:textColor="@color/text_white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_1"
+                        app:layout_constraintStart_toStartOf="@+id/textView_1"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/textView_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="sleeping mode"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgChecking_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_selected"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--             item 2-->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/shadow1"
+                app:neumorph_shadowColorLight="@color/shadow2"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_shapeAppearance="@style/neuCard"
+                app:neumorph_shapeType="basin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_background">
+
+                    <TextView
+                        android:id="@+id/textView2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Climate"
+                        android:textColor="@color/text_white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_2"
+                        app:layout_constraintStart_toStartOf="@+id/textView_2"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/textView_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="A/C is ON"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgChecking_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_selected"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--             item 3-->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/shadow1"
+                app:neumorph_shadowColorLight="@color/shadow2"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_shapeAppearance="@style/neuCard"
+                app:neumorph_shapeType="basin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_background">
+
+                    <TextView
+                        android:id="@+id/textView2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Tires"
+                        android:textColor="@color/text_white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_3"
+                        app:layout_constraintStart_toStartOf="@+id/textView_3"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/textView_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Low Pleasure"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgChecking_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_selected"
+                        tools:ignore="ContentDescription,MissingPrefix" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--             item 4-->
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/shadow1"
+                app:neumorph_shadowColorLight="@color/shadow2"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_shapeAppearance="@style/neuCard"
+                app:neumorph_shapeType="basin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_background">
+
+                    <TextView
+                        android:id="@+id/textView2_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Direction"
+                        android:textColor="@color/text_white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_4"
+                        app:layout_constraintStart_toStartOf="@+id/textView_4"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/textView_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Automatic Mode"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgChecking_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_selected"
+                        tools:ignore="ContentDescription,MissingPrefix" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnBattery"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information"
+            android:textColor="@color/text_white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Ultra-string glass and polymer-layered composite can absorb and redirect impact force for improved..."
+            android:textColor="@color/text_gray"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <soup.neumorphism.NeumorphImageButton
+        android:id="@+id/btnBattery"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="18dp"
+        android:padding="26dp"
+        android:src="@drawable/ic_battery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDry"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow1"
+        app:neumorph_shadowColorLight="@color/shadow2"
+        app:neumorph_shadowElevation="4dp"
+        app:neumorph_shapeAppearance="@style/neuCard"
+        app:neumorph_shapeType="flat" />
+
+    <soup.neumorphism.NeumorphImageButton
+        android:id="@+id/btnDry"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="26dp"
+        android:src="@drawable/ic_dry"
+        app:layout_constraintEnd_toStartOf="@+id/btnRange"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBattery"
+        app:layout_constraintTop_toTopOf="@+id/btnBattery"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow1"
+        app:neumorph_shadowColorLight="@color/shadow2"
+        app:neumorph_shadowElevation="4dp"
+        app:neumorph_shapeAppearance="@style/neuCard"
+        app:neumorph_shapeType="flat" />
+
+    <soup.neumorphism.NeumorphImageButton
+        android:id="@+id/btnRange"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="26dp"
+        android:src="@drawable/ic_range"
+        android:tint="@color/blue_light"
+        app:layout_constraintEnd_toStartOf="@+id/btnProgram"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDry"
+        app:layout_constraintTop_toTopOf="@+id/btnDry"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow1"
+        app:neumorph_shadowColorLight="@color/shadow2"
+        app:neumorph_shadowElevation="4dp"
+        app:neumorph_shapeAppearance="@style/neuCard"
+        app:neumorph_shapeType="pressed" />
+
+    <soup.neumorphism.NeumorphImageButton
+        android:id="@+id/btnProgram"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="26dp"
+        android:src="@drawable/ic_program"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRange"
+        app:layout_constraintTop_toTopOf="@+id/btnRange"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow1"
+        app:neumorph_shadowColorLight="@color/shadow2"
+        app:neumorph_shadowElevation="4dp"
+        app:neumorph_shapeAppearance="@style/neuCard"
+        app:neumorph_shapeType="flat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
